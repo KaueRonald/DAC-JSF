@@ -16,4 +16,9 @@ public class DependenteService {
     public List<Dependente> getAllDependentes(){
         return repository.findAll();
     }
+
+    public Dependente addNewDependente(Dependente dependente){
+        Dependente result = repository.save(dependente);
+        return result;
+    }
 }

@@ -4,14 +4,12 @@ import com.jsf.atividade.models.Dependente;
 import com.jsf.atividade.services.DependenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping(value="dependentes")
 public class DependenteController {
 
     @Autowired
@@ -21,5 +19,11 @@ public class DependenteController {
     public ResponseEntity<List<Dependente>> getAllDependentes(){
         List<Dependente> list = service.getAllDependentes();
         return ResponseEntity.ok().body(list);
+    }
+
+    @PostMapping
+    public ResponseEntity<Dependente> addNewDependente(@RequestBody Dependente dependente){
+        Dependente newDependente = service.addNewDependente(dependente);
+        return ResponseEntity.ok().body(newDependente);
     }
 }

@@ -1,20 +1,25 @@
 package com.jsf.atividade.beans;
 
 import com.jsf.atividade.models.Dependente;
-import com.jsf.atividade.models.Pessoa;
+
 import com.jsf.atividade.repositories.DependentesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.Arrays;
-import java.util.List;
 
-@ManagedBean
 @RequestScoped
+@ManagedBean
+@Component
 public class DependenteBean {
-    private List<Dependente> dependentes = new ArrayList<Dependente>();
+
+    private String uuid;
+    private String nome;
+
+    private LocalDate dataDeNascimento;
 
     @Autowired
     private DependentesRepository repository;
@@ -24,19 +29,48 @@ public class DependenteBean {
         Dependente d2 = new Dependente();
         Dependente d3 = new Dependente();
 
-        d1.setNome("Teste1");
-        d2.setNome("Teste2");
-        d3.setNome("teste3");
 
+        d1.setNome("kaue");
+        d2.setNome("ronald");
+        d3.setNome("silva");
 
-        this.dependentes = repository.saveAll(Arrays.asList(d1,d2,d3));
+        repository.saveAll(Arrays.asList(d1,d2,d3));
     }
 
-    public List<Dependente> getDependentes() {
-        return dependentes;
+    public void save() {
+        if (this.uuid != null && this.nome != null && this.dataDeNascimento != null) {
+            if (this.uuid != "" && this.nome != "") {
+                Dependente dependente = new Dependente();
+                dependente.setUuid(uuid);
+                dependente.setNome(nome);
+                repository.save(dependente);
+                this.uuid = "";
+                this.nome = "";
+            }
+        }
     }
 
-    public void setDependentes(List<Dependente> dependentes) {
-        this.dependentes = dependentes;
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public LocalDate getDataDeNascimento() {
+        return dataDeNascimento;
+    }
+
+    public void setDataDeNascimento(LocalDate dataDeNascimento) {
+        this.dataDeNascimento = dataDeNascimento;
     }
 }
