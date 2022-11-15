@@ -12,11 +12,12 @@
 	<br/>
 	<h:form>
 		<h:outputLabel value="Nome:" for="name"/>
-		<h:inputText id="name" value="#{addBean.nome}"/>
+		<h:inputText id="name" value="#{addBean.nome}" required="true" />
 		<h:outputLabel value="CPF:" for="cpf"/>
-		<h:inputText id="cpf" value="#{addBean.cpf}"/>
+		<h:inputText id="cpf" value="#{addBean.cpf}" required="true"/>
 		<br/>
 		<h:commandButton value="Salvar" onclick="#{addBean.save()}" />
+		<h:commandLink value="Ver Pessoas" action="/index.xhtml" immediate="true" />
 	</h:form>
 </h:body>
 </html>

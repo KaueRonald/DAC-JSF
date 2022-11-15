@@ -22,12 +22,16 @@ public class AddBean {
     private PessoaRepository repository;
 
     public void save(){
-        Pessoa pessoa = new Pessoa();
-        pessoa.setNome(nome);
-        pessoa.setCpf(cpf);
-        repository.save(pessoa);
-        this.nome="";
-        this.cpf="";
+        if(this.nome !=null && this.cpf != null){
+            if(this.nome != "" && this.cpf != ""){
+                Pessoa pessoa = new Pessoa();
+                pessoa.setNome(nome);
+                pessoa.setCpf(cpf);
+                repository.save(pessoa);
+                this.nome="";
+                this.cpf="";
+            }
+        }
     }
 
     public String getNome() {
