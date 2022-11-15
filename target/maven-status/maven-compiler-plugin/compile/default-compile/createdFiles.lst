@@ -1,9 +1,13 @@
 com/jsf/atividade/services/PessoaService.class
 com/jsf/atividade/services/DependenteService.class
+com/jsf/atividade/navigation/Navigation.class
+com/jsf/atividade/controllers/DependenteController.class
+com/jsf/atividade/models/Dependente.class
+com/jsf/atividade/repositories/PessoaRepository.class
+com/jsf/atividade/models/Pessoa.class
+com/jsf/atividade/beans/HomeBean.class
 com/jsf/atividade/Main.class
 com/jsf/atividade/repositories/DependentesRepository.class
-com/jsf/atividade/models/Dependente.class
-com/jsf/atividade/controllers/DependenteController.class
-com/jsf/atividade/repositories/PessoaRepository.class
+com/jsf/atividade/beans/AddBean.class
 com/jsf/atividade/controllers/PessoaController.class
-com/jsf/atividade/models/Pessoa.class
+com/jsf/atividade/beans/DependenteBean.class
