@@ -1,5 +1,6 @@
 package com.jsf.atividade.beans;
 
+import com.jsf.atividade.models.Dependente;
 import com.jsf.atividade.models.Pessoa;
 import com.jsf.atividade.repositories.PessoaRepository;
 import jdk.nashorn.internal.objects.annotations.Getter;
@@ -18,6 +19,8 @@ public class AddBean {
     private String nome;
     private String cpf;
 
+    private Dependente dependente;
+
     @Autowired
     private PessoaRepository repository;
 
@@ -27,6 +30,7 @@ public class AddBean {
                 Pessoa pessoa = new Pessoa();
                 pessoa.setNome(nome);
                 pessoa.setCpf(cpf);
+                pessoa.setDependente(dependente);
                 repository.save(pessoa);
                 this.nome="";
                 this.cpf="";
@@ -48,5 +52,13 @@ public class AddBean {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public Dependente getDependente() {
+        return dependente;
+    }
+
+    public void setDependente(Dependente dependente) {
+        this.dependente = dependente;
     }
 }
