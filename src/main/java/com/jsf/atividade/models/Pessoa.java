@@ -14,12 +14,15 @@ public class Pessoa {
     private Long id;
     private String nome;
 
+    private String cpf;
+
     //Constructors
     public Pessoa(){}
 
-    public Pessoa(Long id, String nome) {
+    public Pessoa(Long id, String nome, String cpf) {
         this.id = id;
         this.nome = nome;
+        this.cpf = cpf;
     }
 
     //Getters and Setters
@@ -37,5 +40,13 @@ public class Pessoa {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 }

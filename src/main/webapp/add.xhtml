@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<title>Página Inicial</title>
+</h:head>
+
+<h:body>
+	<h3>Inserir Pessoas</h3>
+	<br/>
+	<h:form>
+		<h:outputLabel value="Nome:" for="name"/>
+		<h:inputText id="name" value="#{addBean.nome}"/>
+		<h:outputLabel value="CPF:" for="cpf"/>
+		<h:inputText id="cpf" value="#{addBean.cpf}"/>
+		<br/>
+		<h:commandButton value="Salvar" onclick="#{addBean.save()}" />
+	</h:form>
+</h:body>
+</html>
