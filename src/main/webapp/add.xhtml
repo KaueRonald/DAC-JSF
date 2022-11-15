@@ -16,6 +16,11 @@
 		<h:outputLabel value="CPF:" for="cpf"/>
 		<h:inputText id="cpf" value="#{addBean.cpf}" required="true"/>
 		<br/>
+		<h:selectOneMenu value="#{addBean.dependente}" var="dependente" rendered="true" >
+			<f:selectItem itemValue="" itemLabel="Dependente" />
+			<f:selectItems value="#{dependenteBean.dependentes}" var="d" itemValue="#{d.uuid}" itemLabel="#{d.nome}"  />
+		</h:selectOneMenu>
+
 		<h:commandButton value="Salvar" onclick="#{addBean.save()}" />
 		<h:commandLink value="Ver Pessoas" action="/index.xhtml" immediate="true" />
 	</h:form>
