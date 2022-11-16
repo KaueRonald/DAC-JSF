@@ -16,6 +16,9 @@ public class Pessoa {
 
     private String cpf;
 
+    @OneToOne
+    @JoinColumn(name = "dependente_uuid")
+    private Dependente dependente;
     //Constructors
     public Pessoa(){}
 
@@ -48,5 +51,13 @@ public class Pessoa {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public Dependente getDependente() {
+        return dependente;
+    }
+
+    public void setDependente(Dependente dependente) {
+        this.dependente = dependente;
     }
 }

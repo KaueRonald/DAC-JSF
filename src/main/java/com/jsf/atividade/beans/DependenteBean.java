@@ -1,6 +1,7 @@
 package com.jsf.atividade.beans;
 
 import com.jsf.atividade.models.Dependente;
+
 import com.jsf.atividade.repositories.DependentesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -20,7 +21,6 @@ public class DependenteBean {
 
     private LocalDate dataDeNascimento;
 
-
     @Autowired
     private DependentesRepository repository;
 
@@ -28,6 +28,7 @@ public class DependenteBean {
         Dependente d1 = new Dependente();
         Dependente d2 = new Dependente();
         Dependente d3 = new Dependente();
+
 
         d1.setNome("kaue");
         d2.setNome("ronald");
