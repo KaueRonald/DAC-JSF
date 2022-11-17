@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+html,
+body {
+::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255);
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(255, 255, 255);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10%;
+}
+
+}
+
+
+@media (max-width: 720px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #fafafa;
+}
+
+.container{
+    background-color: #bbbebe;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.form{
+    background-color: #9b9999;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 50vw;
+    height: 70vh;
+}
+
+.container h3{
+    display: block;
+    margin: 0 auto;
+    width: 50vw;
+    margin-left: 45%;
+}
+
+.lineCategory{
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 50vw;
+    height: 5vh;
+    border: 2px solid #000000;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.form column{
+    border: 1px solid red;
+}
+
+.adicionarPessoa{
+    text-decoration: none;
+    background-color: rgba(135, 243, 178, 0.62);
+    width: 10vw;
+    height: 3.6vh;
+    color: black;
+    border-radius: 8px;
+    position: absolute;
+    margin-left: 26%;
+    border: 2px solid black;
+    text-align-all: center;
+    text-align-last: center;
+    padding-top: 4px;
+    margin-top: 1%;
+}
+
+.mostrarPessoa{
+    text-decoration: none;
+    background-color: rgba(177, 225, 246, 0.75);
+    width: 10vw;
+    height: 4.7vh;
+    color: black;
+    border-radius: 8px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    margin-left: 14%;
+    margin-top: 1%;
+    cursor: pointer;
+}
+
+.form-add-pessoa{
+    background-color: #9b9999;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 50vw;
+    height: 50vh;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.container-add-pessoa {
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgba(72, 73, 73, 0.53);
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 30vw;
+    height: 50vh;
+
+
+}
+.labelName{
+    color: #05f5e1;
+    margin-right: 31%;
+    display: block;
+    margin-top: 15%;
+    margin-bottom: -4.5%;
+}
+.labelCPF{
+    color: #05f5e1;
+    margin-right: 34%;
+
+}
+
+.save-pessoa{
+
+    background-color: rgba(135, 243, 178, 0.62);
+    width: 10vw;
+    height: 5vh;
+    color: black;
+    border-radius: 8px;
+    border: 2px solid black;
+    text-align-all: center;
+    text-align-last: center;
+    padding-top: 3px;
+    position: relative;
+
+
+}
+
+.ver-pessoa{
+    text-decoration: none;
+    background-color: rgba(177, 225, 246, 0.75);
+    width: 9.8vw;
+    height: 3.5vh;
+    color: black;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid black;
+    position: absolute;
+    text-align-all: center;
+    text-align-last: center;
+    margin-left: -5%;
+    padding-top: 5px;
+
+}
+
+.input-name-add{
+    height: 3vh;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.input-cpf-add{
+    height: 3vh;
+    border-radius: 5px;
+    border: 1px solid black;
+}

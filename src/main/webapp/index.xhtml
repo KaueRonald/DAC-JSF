@@ -5,37 +5,47 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 <h:head>
     <title>Home</title>
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="./css/style.css"
+            media="screen"
+    />
 </h:head>
 
 <h:body>
+    <div class="container">
         <h3>Lista de Pessoas</h3>
         <br/>
-    <h:form>
-        <h:dataTable var="pessoas" value="#{homeBean.list}">
-            <h:column>
-                <f:facet name = "header">ID</f:facet>
-                <h:commandButton class="btn-link" value="#{pessoas.id}" />
-            </h:column>
-            <h:column>
-                <f:facet name = "header">Nome</f:facet>
-                <h:commandButton class="btn-link" value="#{pessoas.nome}" />
-            </h:column>
-            <h:column>
-                <f:facet name = "header">CPF</f:facet>
-                <h:commandButton class="btn-link" value="#{pessoas.cpf}" />
-            </h:column>
-            <h:column>
-                <f:facet name = "header">Dependente</f:facet>
-                <h:commandButton class="btn-link" value="#{pessoas.dependente}" />
-            </h:column>
+        <h:form class="form">
+            <h:dataTable class="lineCategory" var="pessoas" value="#{homeBean.list}">
+                <h:column>
+                    <f:facet name = "header">ID</f:facet>
+                    <h:commandButton class="btn-link" value="#{pessoas.id}" />
+                </h:column>
+                <h:column>
+                    <f:facet name = "header">Nome</f:facet>
+                    <h:commandButton class="btn-link" value="#{pessoas.nome}" />
+                </h:column>
+                <h:column>
+                    <f:facet name = "header">CPF</f:facet>
+                    <h:commandButton class="btn-link" value="#{pessoas.cpf}" />
+                </h:column>
+                <h:column>
+                    <f:facet name = "header">Dependente</f:facet>
+                    <h:commandButton class="btn-link" value="#{pessoas.dependente}" />
+                </h:column>
 
-        </h:dataTable>
-        <h:column>
-            <f:facet name = "header">Resultado</f:facet>
-            <h:commandButton onclick="#{homeBean.getAllPessoas()}" value="Mostrar Pessoas"/>
-        </h:column>
-        <h:commandLink value="Adicionar Pessoa" action="/add.xhtml" immediate="true" />
-    </h:form>
+            </h:dataTable>
+
+            <h:column>
+                <f:facet name = "header">Resultado</f:facet>
+                <h:commandButton class="mostrarPessoa" onclick="#{homeBean.getAllPessoas()}" value="Mostrar Pessoas"/>
+            </h:column>
+            <h:commandLink class="adicionarPessoa" value="Adicionar Pessoa" action="/add.xhtml" immediate="true" />
+        </h:form>
+    </div>
+
 
 </h:body>
 </html>
