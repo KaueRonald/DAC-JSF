@@ -13,6 +13,7 @@ public class Navigation implements WebMvcConfigurer {
         registry.addViewController("/")
                 .setViewName("forward:/index.xhtml");
         registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
-
+        registry.addViewController("/edit")
+                .setViewName("forward:/edit.xhtml");
     }
 }
