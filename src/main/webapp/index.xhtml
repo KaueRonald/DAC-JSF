@@ -21,19 +21,19 @@
             <h:dataTable class="lineCategory" var="pessoas" value="#{homeBean.list}">
                 <h:column>
                     <f:facet name = "header">ID</f:facet>
-                    <h:commandButton class="btn-link" value="#{pessoas.id}" />
+                    <h:outputLabel class="btn-link" value="#{pessoas.id}" />
                 </h:column>
                 <h:column>
                     <f:facet name = "header">Nome</f:facet>
-                    <h:commandButton class="btn-link" value="#{pessoas.nome}" />
+                    <h:commandButton class="btn-link" value="#{pessoas.nome}" actionListener="#{editBean.getPessoaById(pessoas.id)}" />
                 </h:column>
                 <h:column>
                     <f:facet name = "header">CPF</f:facet>
-                    <h:commandButton class="btn-link" value="#{pessoas.cpf}" />
+                    <h:outputLabel class="btn-link" value="#{pessoas.cpf}" />
                 </h:column>
                 <h:column>
                     <f:facet name = "header">Dependente</f:facet>
-                    <h:commandButton class="btn-link" value="#{pessoas.dependente}" />
+                    <h:outputLabel class="btn-link" value="#{pessoas.dependente}" />
                 </h:column>
 
             </h:dataTable>
