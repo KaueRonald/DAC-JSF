@@ -19,6 +19,7 @@ public class HomeBean {
     private PessoaRepository repository;
 
     private String cpf;
+    private Pessoa pessoa;
 
     public void getAllPessoas(){
         this.list = repository.findAll();
