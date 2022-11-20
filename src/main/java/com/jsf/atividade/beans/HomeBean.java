@@ -33,6 +33,9 @@ public class HomeBean {
             this.pessoa = pessoa;
         }
     }
+    public void deletePessoaById(Long id){
+        repository.deleteById(id);
+    }
 
     public List<Pessoa> getList() {
         return list;
