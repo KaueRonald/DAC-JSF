@@ -35,6 +35,9 @@
                     <f:facet name = "header">Dependente</f:facet>
                     <h:outputLabel class="btn-link" value="#{pessoas.dependente}" />
                 </h:column>
+                <h:column>
+                    <h:commandButton class="btn-link" value="Excluir" actionListener="#{homeBean.deletePessoaById(pessoas.id)}"/>
+                </h:column>
 
             </h:dataTable>
 
