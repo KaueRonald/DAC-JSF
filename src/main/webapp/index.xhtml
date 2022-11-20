@@ -46,6 +46,23 @@
         </h:form>
     </div>
 
+    <h:form>
+        <h:outputLabel value="Pesquisa por CPF" />
+        <h:inputText value="#{homeBean.cpf}"/>
+        <h:commandButton value="Pesquisar" onclick="#{homeBean.getPessoaByCpf()}"/><br />
+
+        <h:outputLabel value="ID" /><br />
+        <h:outputLabel value="#{homeBean.pessoa.id}"/><br />
+
+        <h:outputLabel value="Nome" /><br />
+        <h:outputLabel value="#{homeBean.pessoa.nome}"/><br />
+
+        <h:outputLabel value="CPF" /><br />
+        <h:outputLabel value="#{homeBean.pessoa.cpf}"/><br />
+
+        <h:outputLabel value="Dependente" /><br />
+        <h:outputLabel value="#{homeBean.pessoa.dependente}"/>
+    </h:form>
 
 </h:body>
 </html>
