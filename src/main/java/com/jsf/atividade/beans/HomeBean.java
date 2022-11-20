@@ -18,8 +18,19 @@ public class HomeBean {
     @Autowired
     private PessoaRepository repository;
 
+    private String cpf;
+
     public void getAllPessoas(){
         this.list = repository.findAll();
+    }
+
+    public void getPessoaByCpf(){
+        if(cpf != null){
+            System.out.println(cpf);
+            Pessoa pessoa = repository.findByCpf(cpf);
+            System.out.println(pessoa.getNome());
+            this.pessoa = pessoa;
+        }
     }
 
     public List<Pessoa> getList() {
@@ -28,5 +39,21 @@ public class HomeBean {
 
     public void setList(List<Pessoa> list) {
         this.list = list;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 }
