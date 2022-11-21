@@ -39,7 +39,7 @@ body {
 .container{
     background-color: #bbbebe;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
 
 }
 
@@ -183,4 +183,83 @@ body {
     height: 3vh;
     border-radius: 5px;
     border: 1px solid black;
+}
+
+.label-input-edit{
+    display: inline-flex;
+    width: 25vw;
+    font-size: 15pt;
+    margin-top: 4%;
+
+}
+
+#form-edit-page{
+    padding-top: 3%;
+    height: 44vh;
+    text-align: center;
+
+}
+
+#title-edit-page{
+    text-align: center;
+    margin-top: 1%;
+}
+
+.input-edit-page{
+    margin-left: 2%;
+    border-radius: 10px;
+    border-color: black;
+    background-color: aliceblue;
+}
+.input-cpf-edit{
+    margin-left: 5%;
+}
+
+.button-edit-page{
+    border-radius: 10px;
+    background-color: dodgerblue;
+    height: 5vh;
+    width: 12vw;
+
+}
+
+.input-search-page{
+    width: 10vw;
+    margin-left: 2%;
+    border-radius: 10px;
+    background-color: #e0ecf8;
+    border-color: black;
+}
+
+#form-search-page{
+    padding-top: 3%;
+    height: 49vh;
+    text-align: center;
+}
+
+.label-input-search{
+    display: inline-flex;
+    width: 35vw;
+    font-size: 15pt;
+    margin-top: 4%;
+    margin-left: 20%;
+    border-color: black;
+
+
+}
+
+.button-search{
+     margin-left: 2%;
+    border-radius: 10px;
+    width: 8vw;
+    height: 4.8vh;
+    background-color: aquamarine;
+}
+
+.input-search{
+    margin-left: 2%;
+    width: 12vw;
+    border-radius: 10px;
+    background-color: #e0ecf8;
+    border-color: black;
 }

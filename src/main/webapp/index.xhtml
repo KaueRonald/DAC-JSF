@@ -15,7 +15,7 @@
 
 <h:body>
     <div class="container">
-        <h3>Lista de Pessoas</h3>
+        <center> <h2>Lista de Pessoas</h2></center>
         <br/>
         <h:form class="form">
             <h:dataTable class="lineCategory" var="pessoas" value="#{homeBean.list}">
@@ -47,25 +47,35 @@
             </h:column>
             <h:commandLink class="adicionarPessoa" value="Adicionar Pessoa" action="/add.xhtml" immediate="true" />
         </h:form>
+        <br/><br/><br/>
+         <center><h2>Pesquisar Pessoas</h2></center>
+        <br/>
+        <h:form class="form" id="form-search-page">
+            <div class="label-input-search">
+            <h:outputLabel value="Pesquisa por CPF: " />
+            <h:inputText class="input-search" value="#{homeBean.cpf}"/>
+            <h:commandButton class="button-search" value="Pesquisar" onclick="#{homeBean.getPessoaByCpf()}"/><br />
+            </div>
+            <div class="label-input-edit">
+            <h:outputLabel value="ID:" /><br />
+            <h:outputLabel  value="#{homeBean.pessoa.id}"/><br />
+            </div>
+            <div class="label-input-edit">
+            <h:outputLabel value="Nome:" /><br />
+            <h:outputLabel style="width: 13.58vw" class="input-search-page" value="#{homeBean.pessoa.nome}"/><br />
+            </div>
+            <div class="label-input-edit">
+            <h:outputLabel value="CPF:" /><br />
+            <h:outputLabel style="width: 13.6vw; margin-left: 5.5%" class="input-search-page" value="#{homeBean.pessoa.cpf}"/><br />
+            </div>
+            <div class="label-input-edit">
+            <h:outputLabel value="Dependente:" /><br />
+            <h:outputLabel class="input-search-page" value="#{homeBean.pessoa.dependente}"/>
+            </div>
+        </h:form>
     </div>
 
-    <h:form>
-        <h:outputLabel value="Pesquisa por CPF" />
-        <h:inputText value="#{homeBean.cpf}"/>
-        <h:commandButton value="Pesquisar" onclick="#{homeBean.getPessoaByCpf()}"/><br />
 
-        <h:outputLabel value="ID" /><br />
-        <h:outputLabel value="#{homeBean.pessoa.id}"/><br />
-
-        <h:outputLabel value="Nome" /><br />
-        <h:outputLabel value="#{homeBean.pessoa.nome}"/><br />
-
-        <h:outputLabel value="CPF" /><br />
-        <h:outputLabel value="#{homeBean.pessoa.cpf}"/><br />
-
-        <h:outputLabel value="Dependente" /><br />
-        <h:outputLabel value="#{homeBean.pessoa.dependente}"/>
-    </h:form>
 
 </h:body>
 </html>
