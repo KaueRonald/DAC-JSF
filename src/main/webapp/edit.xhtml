@@ -5,19 +5,35 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 <h:head>
     <title>Edit</title>
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="./css/style.css"
+            media="screen"
+    />
 </h:head>
 <h:body>
-    <h:form class="form">
-        <h4>ID:</h4>
-        <h:outputLabel value="#{editBean.id}" />
+    <div class="container">
+        <h2 id="title-edit-page">Editar Pessoas</h2>
+        <h:form class="form" id="form-edit-page">
+            <div class="label-input-edit">
+                <h4>ID:</h4><br/>
+                <h:outputLabel value="#{editBean.id}" />
+            </div>
+            <div class="label-input-edit">
+                <h4>Nome:</h4><br/>
+                <h:inputText class="input-edit-page" value="#{editBean.nome}" />
+            </div>
+            <div class="label-input-edit">
+                <h4>CPF:</h4><br/>
+                <h:inputText class="input-edit-page input-cpf-edit" value="#{editBean.cpf}" /><br/>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <h:commandButton class="button-edit-page" value="Salvar Edição" onclick="#{editBean.editPessoa(editBean.id)}"/>
+        </h:form>
+    </div>
 
-        <h4>Nome:</h4>
-        <h:inputText value="#{editBean.nome}" />
-
-        <h4>CPF:</h4>
-        <h:inputText value="#{editBean.cpf}" /><br/>
-
-        <h:commandButton value="Salvar Edição"  onclick="#{editBean.editPessoa(editBean.id)}"/>
-    </h:form>
 </h:body>
 </html>
