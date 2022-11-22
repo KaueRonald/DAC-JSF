@@ -27,10 +27,13 @@ public class HomeBean {
 
     public void getPessoaByCpf(){
         if(cpf != null){
-            System.out.println(cpf);
             Pessoa pessoa = repository.findByCpf(cpf);
-            System.out.println(pessoa.getNome());
-            this.pessoa = pessoa;
+            if(pessoa != null){
+                this.pessoa = pessoa;
+            }else{
+                Pessoa p = new Pessoa(Long.valueOf(0), "Não Encontrado", "Não Encontrado");
+                this.pessoa = p;
+            }
         }
     }
     public void deletePessoaById(Long id){
